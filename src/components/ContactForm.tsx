@@ -66,11 +66,11 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+          <label htmlFor="name" className="block text-sm font-medium mb-2 text-white">Name</label>
           <input 
             type="text" 
             id="name" 
-            className="w-full bg-purple-900/20 border border-purple-500/30 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
             placeholder="John Doe"
             value={formData.name}
             onChange={handleChange}
@@ -79,11 +79,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+          <label htmlFor="email" className="block text-sm font-medium mb-2 text-white">Email</label>
           <input 
             type="email" 
             id="email" 
-            className="w-full bg-purple-900/20 border border-purple-500/30 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
             placeholder="john@example.com"
             value={formData.email}
             onChange={handleChange}
@@ -93,11 +93,11 @@ export default function ContactForm() {
       </div>
       
       <div>
-        <label htmlFor="subject" className="block text-sm font-medium mb-2">Subject</label>
+        <label htmlFor="subject" className="block text-sm font-medium mb-2 text-white">Subject</label>
         <input 
           type="text" 
           id="subject" 
-          className="w-full bg-purple-900/20 border border-purple-500/30 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="How can we help?"
           value={formData.subject}
           onChange={handleChange}
@@ -106,11 +106,11 @@ export default function ContactForm() {
       </div>
       
       <div>
-        <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+        <label htmlFor="message" className="block text-sm font-medium mb-2 text-white">Message</label>
         <textarea 
           id="message" 
           rows={6} 
-          className="w-full bg-purple-900/20 border border-purple-500/30 rounded-lg px-4 py-3 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Tell us about your project..."
           value={formData.message}
           onChange={handleChange}
@@ -126,7 +126,7 @@ export default function ContactForm() {
       
       <button 
         type="submit" 
-        className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition-colors duration-300"
+        className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition-colors duration-300 backdrop-blur-sm shadow-md border border-purple-500/50"
         disabled={status.submitting}
       >
         {status.submitting ? 'Sending...' : 'Send Message'}

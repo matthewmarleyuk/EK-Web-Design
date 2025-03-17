@@ -455,7 +455,7 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="glass p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-lg" style={{backgroundColor: 'rgba(19, 19, 41, 0.75)', borderColor: 'rgba(124, 58, 237, 0.3)'}}>
+              <div className="glass p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-lg border border-purple-500/30" style={{backgroundColor: 'rgba(19, 19, 41, 0.6)'}}>
                 <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
                 <ContactForm />
               </div>
