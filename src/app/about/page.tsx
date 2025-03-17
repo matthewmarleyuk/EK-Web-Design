@@ -1,12 +1,14 @@
 import React from 'react';
 import Navigation from '../../components/navigation';
-import Image from 'next/image';
 
 // Create a function to properly handle image paths across environments
 const getImagePath = (path: string) => {
   // Check if we're in production (GitHub Pages)
+  // This ensures the path includes /EK-Web-Design in production
   const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
-  return `${basePath}${path}`;
+  // Ensure the path starts with a slash but doesn't have double slashes
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
 };
 
 export default function About() {
@@ -63,13 +65,12 @@ export default function About() {
             </div>
             
             <div className="glass overflow-hidden rounded-2xl flex items-center justify-center">
-              <Image 
+              {/* Using standard img tag with proper path handling */}
+              <img 
                 src={getImagePath('/images/shutterstock_1440732200.jpg')}
                 alt="Professional web developer working on code" 
-                width={1000}
-                height={667}
                 className="w-full h-full object-cover"
-                priority
+                loading="eager"
               />
             </div>
           </div>
