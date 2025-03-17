@@ -2,14 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: ['images.unsplash.com'],
-  },
   output: 'export',
   basePath: process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '',
-  // Disable image optimization since it's not supported with output: 'export'
+  // Configure images for both local development and production
   images: {
-    unoptimized: true,
+    domains: ['images.unsplash.com'],
+    unoptimized: true, // Required when using output: 'export'
   },
 }
 

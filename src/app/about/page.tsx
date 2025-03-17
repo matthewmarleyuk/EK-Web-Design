@@ -2,6 +2,13 @@ import React from 'react';
 import Navigation from '../../components/navigation';
 import Image from 'next/image';
 
+// Create a function to properly handle image paths across environments
+const getImagePath = (path: string) => {
+  // Check if we're in production (GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
+  return `${basePath}${path}`;
+};
+
 export default function About() {
   return (
     <main className="min-h-screen">
@@ -57,7 +64,7 @@ export default function About() {
             
             <div className="glass overflow-hidden rounded-2xl flex items-center justify-center">
               <Image 
-                src="/images/shutterstock_1440732200.jpg" 
+                src={getImagePath('/images/shutterstock_1440732200.jpg')}
                 alt="Professional web developer working on code" 
                 width={1000}
                 height={667}
