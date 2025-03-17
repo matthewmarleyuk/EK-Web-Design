@@ -70,7 +70,7 @@ export default function ContactForm() {
           <input 
             type="text" 
             id="name" 
-            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
             placeholder="John Doe"
             value={formData.name}
             onChange={handleChange}
@@ -83,7 +83,7 @@ export default function ContactForm() {
           <input 
             type="email" 
             id="email" 
-            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
             placeholder="john@example.com"
             value={formData.email}
             onChange={handleChange}
@@ -97,7 +97,7 @@ export default function ContactForm() {
         <input 
           type="text" 
           id="subject" 
-          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="How can we help?"
           value={formData.subject}
           onChange={handleChange}
@@ -110,7 +110,7 @@ export default function ContactForm() {
         <textarea 
           id="message" 
           rows={6} 
-          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-purple-700/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full bg-white/10 backdrop-blur-sm border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
           placeholder="Tell us about your project..."
           value={formData.message}
           onChange={handleChange}
