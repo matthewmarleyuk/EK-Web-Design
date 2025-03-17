@@ -27,7 +27,7 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg">
+    <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-md border-b border-purple-500/30 shadow-lg">
       <div className="container mx-auto py-4 px-4">
         <div className="flex items-center justify-between">
           <Link href={getPath('/')} className="flex items-center space-x-2">

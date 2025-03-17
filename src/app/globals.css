@@ -29,19 +29,19 @@ body {
 }
 
 .glass {
-  @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+  @apply bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
 }
 
 .glass-button {
-  @apply bg-white/20 hover:bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 transition-all duration-300 shadow-lg;
+  @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 transition-all duration-300 shadow-lg;
 }
 
 .glass-darker {
-  @apply bg-white/5 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+  @apply bg-white/5 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
 }
 
 .glass-lighter {
-  @apply bg-white/15 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg;
+  @apply bg-white/15 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
 }
 
 .section-divider {

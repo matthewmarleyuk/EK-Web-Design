@@ -51,14 +51,14 @@ export default function Contact() {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Contact Form */}
-            <div className="glass p-8 rounded-2xl lg:col-span-2 backdrop-blur-lg border border-purple-500/30 shadow-xl" style={{backgroundColor: 'rgba(19, 19, 41, 0.6)'}}>
+            <div className="glass p-8 rounded-2xl lg:col-span-2">
               <h2 className="text-xl sm:text-2xl font-semibold mb-6">Contact Form</h2>
               <ContactForm />
             </div>
             
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="glass p-8 rounded-2xl backdrop-blur-lg border border-purple-500/30 shadow-lg" style={{backgroundColor: 'rgba(19, 19, 41, 0.6)'}}>
+              <div className="glass p-8 rounded-2xl">
                 <h2 className="text-2xl font-semibold mb-6">Contact Information</h2>
                 
                 <div className="space-y-6">
@@ -105,7 +105,7 @@ export default function Contact() {
                 </div>
               </div>
               
-              <div className="glass p-8 rounded-2xl backdrop-blur-lg border border-purple-500/30 shadow-lg" style={{backgroundColor: 'rgba(19, 19, 41, 0.6)'}}>
+              <div className="glass p-8 rounded-2xl">
                 <h2 className="text-2xl font-semibold mb-6">Business Hours</h2>
                 <div className="space-y-3">
                   <div className="flex justify-between">
