@@ -17,12 +17,12 @@ export default function Home() {
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
               We Create Modern<br />
               Websites That Are <span className="text-purple-400">impactful</span>
             </h1>
             
-            <p className="text-lg text-white/80 max-w-2xl mx-auto mb-10">
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto mb-10">
               Transforming visions into reality through innovative design and cutting-edge technology. We're not just designers – we're digital architects.
             </p>
             
@@ -57,7 +57,9 @@ export default function Home() {
       <section className="section" id="why-us">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose East Kilbride Web Design</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Why Choose East Kilbride<br className="sm:hidden" /> Web Design
+            </h2>
             <p className="text-white/80">
               We combine creativity, technical expertise, and business acumen to deliver websites that not only look great but also perform exceptionally.
             </p>
@@ -269,7 +271,7 @@ export default function Home() {
           <div className="glass p-8 rounded-2xl">
             <div className="relative">
               {/* Vertical line */}
-              <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-purple-600/70" aria-hidden="true"></div>
+              <div className="absolute left-6 md:left-6 top-0 bottom-0 w-0.5 bg-purple-600/70 hidden sm:block" aria-hidden="true"></div>
               
               <div className="space-y-12">
                 {[
@@ -304,15 +306,15 @@ export default function Home() {
                     description: 'We provide ongoing maintenance and help you evolve your website as your business grows.'
                   }
                 ].map((step, index) => (
-                  <div key={index} className="relative flex gap-6 items-start">
-                    <div className="flex-shrink-0 z-10">
+                  <div key={index} className="relative flex flex-col sm:flex-row gap-4 sm:gap-6 items-start">
+                    <div className="flex-shrink-0 z-10 mb-2 sm:mb-0">
                       <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center font-bold text-purple-600 shadow-lg">
                         {step.number}
                       </div>
                     </div>
-                    <div className="glass-lighter p-6 rounded-xl flex-1">
-                      <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                      <p className="text-white/70">{step.description}</p>
+                    <div className="glass-lighter p-4 sm:p-6 rounded-xl flex-1 w-full">
+                      <h3 className="text-lg sm:text-xl font-bold mb-2">{step.title}</h3>
+                      <p className="text-white/70 text-sm sm:text-base">{step.description}</p>
                     </div>
                   </div>
                 ))}

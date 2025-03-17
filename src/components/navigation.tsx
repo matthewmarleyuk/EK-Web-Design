@@ -2,25 +2,31 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { Menu, X, User, Wrench, Phone, ArrowRight, Zap, Home } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   
-  // Prevent scrolling when menu is open
+  // Handle menu toggle
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+  
+  // Close menu when route changes
   useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'auto';
-    }
+    const handleRouteChange = () => {
+      setIsOpen(false);
+    };
+    
+    window.addEventListener('popstate', handleRouteChange);
     
     return () => {
-      document.body.style.overflow = 'auto';
+      window.removeEventListener('popstate', handleRouteChange);
     };
-  }, [isOpen]);
+  }, []);
 
   return (
-    <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg">
+    <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg">
       <div className="container mx-auto py-4 px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
@@ -46,86 +52,70 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Mobile Navigation Button */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-lg bg-white/20 backdrop-blur-lg border border-white/20"
-            aria-label="Toggle menu"
+          {/* Mobile menu button */}
+          <button 
+            type="button" 
+            className="md:hidden inline-flex items-center p-2 text-white rounded-lg hover:bg-purple-800/30 focus:outline-none" 
+            aria-controls="mobile-menu" 
+            aria-expanded={isOpen}
+            onClick={toggleMenu}
           >
+            <span className="sr-only">Open main menu</span>
             {isOpen ? (
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
+              <X className="w-6 h-6" />
             ) : (
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              <Menu className="w-6 h-6" />
             )}
           </button>
         </div>
-
-        {/* Mobile Navigation Menu - Slide from right */}
-        <div 
-          className={`md:hidden fixed inset-y-0 right-0 z-40 w-4/5 max-w-sm bg-gray-900 text-white opacity-100 shadow-xl transform transition-transform duration-300 ease-in-out ${
-            isOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
-        >
-          <div className="flex justify-between items-center p-5 border-b border-gray-700">
-            <h2 className="text-xl font-medium text-white">NAVIGATION</h2>
-            <button 
-              onClick={() => setIsOpen(false)}
-              className="text-white hover:text-gray-300"
-            >
-              <svg width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="p-5">
-            <div className="flex flex-col space-y-6">
-              <Link
-                href="/about"
-                className="text-lg font-medium text-white hover:text-gray-300 py-2 border-b border-gray-700"
-                onClick={() => setIsOpen(false)}
-              >
-                About
-              </Link>
-              <Link
-                href="/services"
-                className="text-lg font-medium text-white hover:text-gray-300 py-2 border-b border-gray-700"
-                onClick={() => setIsOpen(false)}
-              >
-                Services
-              </Link>
-              <Link
-                href="/contact"
-                className="text-lg font-medium text-white hover:text-gray-300 py-2 border-b border-gray-700"
-                onClick={() => setIsOpen(false)}
-              >
-                Contact
-              </Link>
-            </div>
-            
-            <div className="mt-10">
-              <Link
-                href="/contact"
-                className="block w-full bg-purple-600 text-white font-medium py-3 px-6 rounded-md text-center transition-all duration-300 hover:bg-purple-700"
-                onClick={() => setIsOpen(false)}
-              >
-                Get Started
-              </Link>
-            </div>
-          </div>
-        </div>
         
-        {/* Overlay when menu is open */}
-        <div 
-          className={`md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-30 transition-opacity duration-300 ${
-            isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-          onClick={() => setIsOpen(false)}
-        />
+        {/* Mobile Navigation Menu - Dropdown style */}
+        {isOpen && (
+          <div 
+            className="md:hidden w-full mt-4 overflow-hidden"
+          >
+            <div className="bg-[#1a103a] shadow-xl border border-purple-900/30">
+              <div className="p-4 space-y-3">
+                <Link 
+                  href="/about" 
+                  className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  About
+                </Link>
+                <Link 
+                  href="/services" 
+                  className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Services
+                </Link>
+                <Link 
+                  href="/contact" 
+                  className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Contact
+                </Link>
+                
+                <div className="pt-3 mt-3 border-t border-purple-900/30">
+                  <Link
+                    href="/contact"
+                    className="flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 transition-colors duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Zap className="w-5 h-5 mr-2" />
+                    Get Started
+                  </Link>
+                  
+                  <div className="mt-4 flex items-center justify-center">
+                    <p className="text-xs text-purple-300">Trusted by 100+ clients</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );

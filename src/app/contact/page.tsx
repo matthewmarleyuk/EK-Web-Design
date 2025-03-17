@@ -42,17 +42,16 @@ export default function Contact() {
       <section className="relative pt-28 pb-28 lg:pt-36 lg:pb-36">
         <div className="container">
           <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto" style={{ display: 'flex', flexDirection: 'column' }}>
-              <span>Have a question or want to work with us? Reach out</span>
-              <span>and we'll get back to you shortly.</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
+            <p className="text-base md:text-lg text-white/80 max-w-2xl mx-auto px-4">
+              Have a question or want to work with us? Reach out and we'll get back to you shortly.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {/* Contact Form */}
             <div className="glass p-8 rounded-2xl lg:col-span-2">
-              <h2 className="text-2xl font-semibold mb-6">Contact Form</h2>
+              <h2 className="text-xl sm:text-2xl font-semibold mb-6">Contact Form</h2>
               <ContactForm />
             </div>
             
@@ -70,7 +69,7 @@ export default function Contact() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="font-medium text-lg mb-1">Our Location</h3>
+                      <h3 className="font-medium text-base sm:text-lg mb-1">Our Location</h3>
                       <p className="text-white/70">14 Whittaker Avenue, East Kilbride, G75 9QA</p>
                     </div>
                   </div>
@@ -134,8 +133,8 @@ export default function Contact() {
       <section className="section" id="testimonials">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Client Testimonials</h2>
-            <p className="text-white/80">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Client Testimonials</h2>
+            <p className="text-sm md:text-base text-white/80">
               Hear from the businesses we've helped transform
             </p>
           </div>
@@ -217,8 +216,8 @@ export default function Contact() {
       <section className="section">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
-            <p className="text-white/80">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Frequently Asked Questions</h2>
+            <p className="text-sm md:text-base text-white/80">
               Find answers to common questions about our web design and development services
             </p>
           </div>

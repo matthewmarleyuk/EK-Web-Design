@@ -20,10 +20,10 @@ export default function About() {
       <section className="relative pt-28 pb-16 lg:pt-36 lg:pb-20" id="about-hero">
         <div className="container">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               About <span className="text-purple-400">Us</span>
             </h1>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto mb-10">
+            <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto mb-10">
               We're a passionate team of web designers and developers dedicated to creating exceptional digital experiences for businesses in East Kilbride and beyond.
             </p>
             
@@ -94,8 +94,8 @@ export default function About() {
       <section className="section" id="values">
         <div className="container">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Core Values</h2>
-            <p className="text-white/80">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6">Our Core Values</h2>
+            <p className="text-sm md:text-base text-white/80">
               These principles guide everything we do and define who we are as a company.
             </p>
           </div>
@@ -109,8 +109,8 @@ export default function About() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-center">Quality First</h3>
-              <p className="text-white/80 text-center">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">Quality First</h3>
+              <p className="text-sm md:text-base text-white/80 text-center">
                 We never compromise on quality. From clean code to pixel-perfect designs, excellence is our standard.
               </p>
             </div>
@@ -123,8 +123,8 @@ export default function About() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-center">Client Partnership</h3>
-              <p className="text-white/80 text-center">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">Client Partnership</h3>
+              <p className="text-sm md:text-base text-white/80 text-center">
                 We view every client relationship as a long-term partnership built on trust, transparency, and mutual success.
               </p>
             </div>
@@ -137,8 +137,8 @@ export default function About() {
                   </svg>
                 </div>
               </div>
-              <h3 className="text-xl font-bold mb-4 text-center">Innovation</h3>
-              <p className="text-white/80 text-center">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-center">Innovation</h3>
+              <p className="text-sm md:text-base text-white/80 text-center">
                 We embrace new technologies and approaches to deliver cutting-edge solutions for our clients.
               </p>
             </div>
@@ -286,7 +286,7 @@ export default function About() {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Services</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2">
                 {[
                   'Website Design',
@@ -306,7 +306,7 @@ export default function About() {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {[
                   { name: 'About Us', href: '/about' },
@@ -323,7 +323,7 @@ export default function About() {
             </div>
             
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
+              <h4 className="text-base md:text-lg font-semibold mb-4">Contact Us</h4>
               <ul className="space-y-3 text-white/70">
                 <li className="flex items-start gap-3">
                   <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">

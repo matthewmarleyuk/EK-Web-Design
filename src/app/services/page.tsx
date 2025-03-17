@@ -106,10 +106,9 @@ export default function Services() {
       <section className="relative pt-28 pb-8 lg:pt-36 lg:pb-12">
         <div className="container">
           <div className="text-center mb-6">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
-            <p className="text-lg text-white/80 max-w-3xl mx-auto" style={{ display: 'flex', flexDirection: 'column' }}>
-              <span>We provide comprehensive web design and development solutions</span>
-              <span>tailored to meet your unique business needs.</span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
+            <p className="text-base md:text-lg text-white/80 max-w-3xl mx-auto px-4">
+              We provide comprehensive web design and development solutions tailored to meet your unique business needs.
             </p>
           </div>
         </div>
