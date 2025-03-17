@@ -2,6 +2,15 @@ import React from 'react';
 import Navigation from '@/components/navigation';
 import dynamic from 'next/dynamic';
 
+// Create a function to properly handle paths across environments
+const getPath = (path: string) => {
+  // Check if we're in production (GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
+  // Ensure the path starts with a slash but doesn't have double slashes
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
+};
+
 // Use dynamic import with no SSR for the client component
 const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });
 
@@ -277,7 +286,7 @@ export default function Contact() {
                   'Website Maintenance'
                 ].map((service, index) => (
                   <li key={index}>
-                    <a href="/services" className="text-white/70 hover:text-white transition-colors duration-300">
+                    <a href={getPath('/services')} className="text-white/70 hover:text-white transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -289,9 +298,9 @@ export default function Contact() {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'About Us', href: '/about' },
-                  { name: 'Services', href: '#services' },
-                  { name: 'Contact', href: '/contact' }
+                  { name: 'About Us', href: getPath('/about') },
+                  { name: 'Services', href: getPath('/services') },
+                  { name: 'Contact', href: getPath('/contact') }
                 ].map((link, index) => (
                   <li key={index}>
                     <a href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">

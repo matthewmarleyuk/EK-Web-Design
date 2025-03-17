@@ -1,6 +1,15 @@
 import React from 'react';
 import Navigation from '@/components/navigation';
 
+// Create a function to properly handle paths across environments
+const getPath = (path: string) => {
+  // Check if we're in production (GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
+  // Ensure the path starts with a slash but doesn't have double slashes
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
+};
+
 // Service card data
 const serviceCards = [
   {
@@ -249,10 +258,10 @@ export default function Services() {
               Our team is ready to bring your vision to life.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
+              <a href={getPath('/contact')} className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
                 Get in Touch
               </a>
-              <a href="/#services" className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
+              <a href={getPath('/#services')} className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
                 Explore Our Services
               </a>
             </div>
@@ -313,9 +322,9 @@ export default function Services() {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'About Us', href: '/about' },
+                  { name: 'About Us', href: getPath('/about') },
                   { name: 'Services', href: '#services' },
-                  { name: 'Contact', href: '/contact' }
+                  { name: 'Contact', href: getPath('/contact') }
                 ].map((link, index) => (
                   <li key={index}>
                     <a href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">

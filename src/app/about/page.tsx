@@ -1,8 +1,8 @@
 import React from 'react';
 import Navigation from '../../components/navigation';
 
-// Create a function to properly handle image paths across environments
-const getImagePath = (path: string) => {
+// Create a function to properly handle paths across environments
+const getPath = (path: string) => {
   // Check if we're in production (GitHub Pages)
   // This ensures the path includes /EK-Web-Design in production
   const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
@@ -28,7 +28,7 @@ export default function About() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <a href="/contact" className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] animate-pulse-slow">
+              <a href={getPath('/contact')} className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] animate-pulse-slow">
                 Get Started
               </a>
               <a href="https://cal.com/matthewmarley/15min" target="_blank" rel="noopener noreferrer" className="glass-button bg-black/30 text-center font-medium px-8 py-3">
@@ -242,10 +242,10 @@ export default function About() {
               Our team is ready to bring your vision to life.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a href="/contact" className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
+              <a href={getPath('/contact')} className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
                 Get in Touch
               </a>
-              <a href="/#services" className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
+              <a href={getPath('/#services')} className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
                 Explore Our Services
               </a>
             </div>
@@ -297,7 +297,7 @@ export default function About() {
                   'Website Maintenance'
                 ].map((service, index) => (
                   <li key={index}>
-                    <a href="/services" className="text-white/70 hover:text-white transition-colors duration-300">
+                    <a href={getPath('/services')} className="text-white/70 hover:text-white transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -309,9 +309,9 @@ export default function About() {
               <h4 className="text-base md:text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'About Us', href: '/about' },
-                  { name: 'Services', href: '/services' },
-                  { name: 'Contact', href: '/contact' }
+                  { name: 'About Us', href: getPath('/about') },
+                  { name: 'Services', href: getPath('/services') },
+                  { name: 'Contact', href: getPath('/contact') }
                 ].map((link, index) => (
                   <li key={index}>
                     <a href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">
