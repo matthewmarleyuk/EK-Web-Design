@@ -1,6 +1,9 @@
 import React from 'react';
 import Navigation from '../../components/navigation';
+import { getPath } from '../../utils/path';
 
+// Remove or comment out the old getPath function
+/*
 // Create a function to properly handle paths across environments
 const getPath = (path: string) => {
   // Check if we're in production (GitHub Pages)
@@ -10,6 +13,7 @@ const getPath = (path: string) => {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   return `${basePath}${normalizedPath}`;
 };
+*/
 
 export default function About() {
   return (

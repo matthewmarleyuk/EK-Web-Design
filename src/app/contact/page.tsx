@@ -1,15 +1,7 @@
 import React from 'react';
 import Navigation from '@/components/navigation';
 import dynamic from 'next/dynamic';
-
-// Create a function to properly handle paths across environments
-const getPath = (path: string) => {
-  // Check if we're in production (GitHub Pages)
-  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
-  // Ensure the path starts with a slash but doesn't have double slashes
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return `${basePath}${normalizedPath}`;
-};
+import { getPath } from '../../utils/path';
 
 // Use dynamic import with no SSR for the client component
 const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });

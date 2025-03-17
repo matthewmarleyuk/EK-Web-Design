@@ -3,15 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, User, Wrench, Phone, ArrowRight, Zap, Home } from "lucide-react";
-
-// Create a function to properly handle paths across environments
-const getPath = (path: string) => {
-  // Check if we're in production (GitHub Pages)
-  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
-  // Ensure the path starts with a slash but doesn't have double slashes
-  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
-  return `${basePath}${normalizedPath}`;
-};
+import { getPath } from '../utils/path';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);

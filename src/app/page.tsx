@@ -1,8 +1,11 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 import ContactForm from '../components/ContactForm';
+import { getPath } from '../utils/path';
 
+// Remove or comment out the old getPath function
 // Create a function to properly handle paths across environments
+/*
 const getPath = (path: string) => {
   // Check if we're in production (GitHub Pages)
   const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
@@ -10,6 +13,7 @@ const getPath = (path: string) => {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`;
   return `${basePath}${normalizedPath}`;
 };
+*/
 
 export default function Home() {
   return (
