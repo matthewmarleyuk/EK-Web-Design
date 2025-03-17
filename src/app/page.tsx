@@ -1,7 +1,10 @@
 import React from 'react';
 import Navigation from '../components/navigation';
-import ContactForm from '../components/ContactForm';
 import { getPath } from '../utils/path';
+import dynamic from 'next/dynamic';
+
+// Use dynamic import with no SSR for the client component
+const ContactForm = dynamic(() => import('../components/ContactForm'), { ssr: false });
 
 // Remove or comment out the old getPath function
 // Create a function to properly handle paths across environments
@@ -462,8 +465,8 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="glass p-6 md:p-8 rounded-2xl">
-                <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
+              <div className="glass p-8 rounded-2xl">
+                <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
                 <ContactForm />
               </div>
             </div>
