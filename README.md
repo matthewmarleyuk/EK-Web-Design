@@ -1,15 +1,21 @@
-# East Kilbride Web Design Website
+# East Kilbride Web Design
 
-A modern, responsive website for East Kilbride Web Design built using Next.js, TypeScript, and Tailwind CSS.
+A modern, responsive website for East Kilbride Web Design built with Next.js and TailwindCSS.
 
 ## Features
 
-- Server-side rendering (SSR)
-- Responsive design for all devices
-- Glassmorphism design elements
-- Smooth animations and transitions
+- React Server Components
+- Next.js App Router
+- Responsive design with TailwindCSS
+- Glass morphism UI
+- Animate on Scroll effects
 - Contact form
-- Interactive UI components
+
+## Deployment
+
+This website is deployed to GitHub Pages using GitHub Actions. The deployment is automatically triggered when changes are pushed to the main branch.
+
+Visit the live site at: https://matthewmarleyuk.github.io/EK-Web-Design/
 
 ## Technologies Used
 
