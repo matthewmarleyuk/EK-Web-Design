@@ -67,19 +67,19 @@ export default function About() {
             <div className="glass p-8 rounded-2xl">
               <h2 className="text-3xl font-bold mb-6">Our Track Record</h2>
               <div className="space-y-6">
-                <div className="glass-darker p-5 rounded-xl text-center">
+                <div className="bg-[#2a1a50] p-5 rounded-xl text-center border border-purple-500/30">
                   <div className="text-5xl font-bold mb-2 text-purple-400">15</div>
-                  <p className="text-xl font-medium">Years Experience</p>
+                  <p className="text-xl font-medium text-white">Years Experience</p>
                 </div>
                 
-                <div className="glass-darker p-5 rounded-xl text-center">
+                <div className="bg-[#2a1a50] p-5 rounded-xl text-center border border-purple-500/30">
                   <div className="text-5xl font-bold mb-2 text-purple-400">150+</div>
-                  <p className="text-xl font-medium">Projects Completed</p>
+                  <p className="text-xl font-medium text-white">Projects Completed</p>
                 </div>
                 
-                <div className="glass-darker p-5 rounded-xl text-center">
+                <div className="bg-[#2a1a50] p-5 rounded-xl text-center border border-purple-500/30">
                   <div className="text-5xl font-bold mb-2 text-purple-400">5.0</div>
-                  <p className="text-xl font-medium">Rated on Google</p>
+                  <p className="text-xl font-medium text-white">Rated on Google</p>
                 </div>
               </div>
             </div>

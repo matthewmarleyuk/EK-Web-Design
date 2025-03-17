@@ -312,9 +312,9 @@ export default function Home() {
                         {step.number}
                       </div>
                     </div>
-                    <div className="glass-lighter p-4 sm:p-6 rounded-xl flex-1 w-full">
-                      <h3 className="text-lg sm:text-xl font-bold mb-2">{step.title}</h3>
-                      <p className="text-white/70 text-sm sm:text-base">{step.description}</p>
+                    <div className="bg-[#2a1a50] p-4 sm:p-6 rounded-xl flex-1 w-full border border-purple-500/30">
+                      <h3 className="text-lg sm:text-xl font-bold mb-2 text-white">{step.title}</h3>
+                      <p className="text-white/90 text-sm sm:text-base">{step.description}</p>
                     </div>
                   </div>
                 ))}
