@@ -53,57 +53,35 @@ export default function About() {
               <h2 className="text-3xl font-bold mb-6">Our Story</h2>
               <div className="space-y-4 text-white/80">
                 <p>
-                  East Kilbride Web Design was founded in 2010 with a simple mission: to provide local businesses with high-quality, affordable websites that actually deliver results.
+                  East Kilbride Web Design was founded in 2010 with a simple mission: to provide local businesses with high-quality, affordable websites that actually deliver results. We started with the belief that every business, regardless of size, deserves a powerful online presence.
                 </p>
                 <p>
-                  Starting with just one developer and a handful of clients, we've grown into a full-service digital agency with a diverse team of specialists and a portfolio of over 150 successful projects.
+                  Starting with just one developer and a handful of clients, we've grown into a full-service digital agency with a diverse team of specialists and a portfolio of over 150 successful projects. Our team now includes designers, developers, content creators, and SEO specialists who work together to create comprehensive digital solutions.
                 </p>
                 <p>
-                  Throughout our 15-year journey, we've evolved with the changing landscape, but our commitment to personalized service and exceptional quality has remained unchanged.
+                  Throughout our 15-year journey, we've evolved with the changing landscape, but our commitment to personalized service and exceptional quality has remained unchanged. We've witnessed the evolution of web technologies from basic HTML to sophisticated frameworks like React and Next.js, always staying ahead of the curve to deliver cutting-edge solutions.
                 </p>
               </div>
             </div>
             
-            <div className="glass overflow-hidden rounded-2xl flex items-center justify-center">
-              {/* Using standard img tag with proper path handling */}
-              <img 
-                src={getImagePath('/images/shutterstock_1440732200.jpg')}
-                alt="Professional web developer working on code" 
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divider */}
-      <div className="section-divider" aria-hidden="true"></div>
-
-      {/* Stats Section */}
-      <section className="section py-16" id="stats">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Track Record</h2>
-            <p className="text-white/80">
-              With over a decade of experience and hundreds of successful projects, we've built a reputation for delivering exceptional results that our clients love.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-darker p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">15</div>
-              <p className="text-xl font-medium">Years Experience</p>
-            </div>
-            
-            <div className="glass-darker p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">150+</div>
-              <p className="text-xl font-medium">Projects Completed</p>
-            </div>
-            
-            <div className="glass-darker p-8 text-center">
-              <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">5.0</div>
-              <p className="text-xl font-medium">Rated on Google</p>
+            <div className="glass p-8 rounded-2xl">
+              <h2 className="text-3xl font-bold mb-6">Our Track Record</h2>
+              <div className="space-y-6">
+                <div className="glass-darker p-5 rounded-xl text-center">
+                  <div className="text-5xl font-bold mb-2 text-purple-400">15</div>
+                  <p className="text-xl font-medium">Years Experience</p>
+                </div>
+                
+                <div className="glass-darker p-5 rounded-xl text-center">
+                  <div className="text-5xl font-bold mb-2 text-purple-400">150+</div>
+                  <p className="text-xl font-medium">Projects Completed</p>
+                </div>
+                
+                <div className="glass-darker p-5 rounded-xl text-center">
+                  <div className="text-5xl font-bold mb-2 text-purple-400">5.0</div>
+                  <p className="text-xl font-medium">Rated on Google</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -125,7 +103,7 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="glass-darker p-8 rounded-2xl h-full">
               <div className="mb-6 text-center">
-                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-purple-400 mx-auto flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-white mx-auto flex items-center justify-center">
                   <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
@@ -139,7 +117,7 @@ export default function About() {
 
             <div className="glass-darker p-8 rounded-2xl h-full">
               <div className="mb-6 text-center">
-                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-purple-400 mx-auto flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-white mx-auto flex items-center justify-center">
                   <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
@@ -153,7 +131,7 @@ export default function About() {
 
             <div className="glass-darker p-8 rounded-2xl h-full">
               <div className="mb-6 text-center">
-                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-purple-400 mx-auto flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full bg-purple-600/30 text-white mx-auto flex items-center justify-center">
                   <svg width="32" height="32" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                   </svg>
