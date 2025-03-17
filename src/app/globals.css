@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 10, 4, 28;
+  --background-end-rgb: 18, 10, 48;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  ) fixed;
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.glass {
+  @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+}
+
+.glass-button {
+  @apply bg-white/20 hover:bg-white/30 backdrop-blur-lg border border-white/20 rounded-full px-6 py-3 transition-all duration-300 shadow-lg;
+}
+
+.glass-darker {
+  @apply bg-white/5 backdrop-blur-lg border border-white/20 rounded-xl shadow-lg;
+}
+
+.glass-lighter {
+  @apply bg-white/15 backdrop-blur-lg border border-white/30 rounded-xl shadow-lg;
+}
+
+.section-divider {
+  @apply w-full max-w-4xl mx-auto border-t border-white/10 my-8;
+} 
