@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from '../components/navigation';
+import ContactForm from '../components/ContactForm';
 
 // Create a function to properly handle paths across environments
 const getPath = (path: string) => {
@@ -446,7 +447,7 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  <a href="tel:+441234567890" className="glass-button inline-block font-medium">
+                  <a href="tel:07478707581" className="glass-button inline-block font-medium">
                     Call Us Now
                   </a>
                   <a href={getPath('/contact')} className="glass-button inline-block font-medium bg-purple-600/30">
@@ -456,56 +457,7 @@ export default function Home() {
               </div>
               <div className="glass p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-lg" style={{backgroundColor: 'rgba(19, 19, 41, 0.75)', borderColor: 'rgba(124, 58, 237, 0.3)'}}>
                 <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
-                <form className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block mb-2 text-white/90">Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
-                        placeholder="Your name"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block mb-2 text-white/90">Email</label>
-                      <input
-                        type="email"
-                        id="email"
-                        className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
-                        placeholder="Your email"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <label htmlFor="subject" className="block mb-2 text-white/90">Subject</label>
-                    <input
-                      type="text"
-                      id="subject"
-                      className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
-                      placeholder="How can we help?"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block mb-2 text-white/90">Message</label>
-                    <textarea
-                      id="message"
-                      rows={4}
-                      className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
-                      placeholder="Tell us about your project..."
-                      required
-                    />
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 shadow-lg"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                <ContactForm />
               </div>
             </div>
           </div>

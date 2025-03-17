@@ -4,6 +4,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { Menu, X, User, Wrench, Phone, ArrowRight, Zap, Home } from "lucide-react";
 
+// Create a function to properly handle paths across environments
+const getPath = (path: string) => {
+  // Check if we're in production (GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
+  // Ensure the path starts with a slash but doesn't have double slashes
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
+};
+
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   
@@ -29,23 +38,23 @@ export default function Navigation() {
     <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-lg">
       <div className="container mx-auto py-4 px-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={getPath('/')} className="flex items-center space-x-2">
             <span className="text-xl font-bold tracking-tight">EK Web Design</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link href="/about" className="text-white/90 hover:text-white transition-colors duration-300">
+            <Link href={getPath('/about')} className="text-white/90 hover:text-white transition-colors duration-300">
               About
             </Link>
-            <Link href="/services" className="text-white/90 hover:text-white transition-colors duration-300">
+            <Link href={getPath('/services')} className="text-white/90 hover:text-white transition-colors duration-300">
               Services
             </Link>
-            <Link href="/contact" className="text-white/90 hover:text-white transition-colors duration-300">
+            <Link href={getPath('/contact')} className="text-white/90 hover:text-white transition-colors duration-300">
               Contact
             </Link>
             <Link
-              href="/contact"
+              href={getPath('/contact')}
               className="bg-white text-purple-600 font-medium py-2 px-5 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] animate-pulse-slow"
             >
               Get Started
@@ -77,21 +86,21 @@ export default function Navigation() {
             <div className="bg-[#1a103a] shadow-xl border border-purple-900/30">
               <div className="p-4 space-y-3">
                 <Link 
-                  href="/about" 
+                  href={getPath('/about')} 
                   className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   About
                 </Link>
                 <Link 
-                  href="/services" 
+                  href={getPath('/services')} 
                   className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
                   Services
                 </Link>
                 <Link 
-                  href="/contact" 
+                  href={getPath('/contact')} 
                   className="block px-4 py-3 text-white hover:bg-purple-800/30 transition-colors duration-200"
                   onClick={() => setIsOpen(false)}
                 >
@@ -100,7 +109,7 @@ export default function Navigation() {
                 
                 <div className="pt-3 mt-3 border-t border-purple-900/30">
                   <Link
-                    href="/contact"
+                    href={getPath('/contact')}
                     className="flex items-center justify-center w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-4 transition-colors duration-200"
                     onClick={() => setIsOpen(false)}
                   >
