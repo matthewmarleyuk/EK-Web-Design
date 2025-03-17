@@ -29,19 +29,40 @@ body {
 }
 
 .glass {
-  @apply bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
 }
 
 .glass-button {
-  @apply bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/20 rounded-full px-6 py-3 transition-all duration-300 shadow-lg;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 9999px; /* full rounded for buttons */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.21);
+  @apply px-6 py-3 transition-all duration-300 hover:bg-white/10;
 }
 
 .glass-darker {
-  @apply bg-white/5 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
+  background: rgba(255, 255, 255, 0.03); /* darker variant */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .glass-lighter {
-  @apply bg-white/15 backdrop-blur-md border border-purple-500/30 rounded-2xl shadow-lg;
+  background: rgba(255, 255, 255, 0.1); /* lighter variant */
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.3px);
+  -webkit-backdrop-filter: blur(4.3px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .section-divider {

@@ -70,7 +70,14 @@ export default function ContactForm() {
           <input 
             type="text" 
             id="name" 
-            className="w-full bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.06)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              backdropFilter: "blur(4.3px)",
+              WebkitBackdropFilter: "blur(4.3px)",
+              border: "1px solid rgba(255, 255, 255, 0.21)"
+            }}
             placeholder="John Doe"
             value={formData.name}
             onChange={handleChange}
@@ -83,7 +90,14 @@ export default function ContactForm() {
           <input 
             type="email" 
             id="email" 
-            className="w-full bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+            style={{
+              background: "rgba(255, 255, 255, 0.06)",
+              boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+              backdropFilter: "blur(4.3px)",
+              WebkitBackdropFilter: "blur(4.3px)",
+              border: "1px solid rgba(255, 255, 255, 0.21)"
+            }}
             placeholder="john@example.com"
             value={formData.email}
             onChange={handleChange}
@@ -97,7 +111,14 @@ export default function ContactForm() {
         <input 
           type="text" 
           id="subject" 
-          className="w-full bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.06)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(4.3px)",
+            WebkitBackdropFilter: "blur(4.3px)",
+            border: "1px solid rgba(255, 255, 255, 0.21)"
+          }}
           placeholder="How can we help?"
           value={formData.subject}
           onChange={handleChange}
@@ -110,7 +131,14 @@ export default function ContactForm() {
         <textarea 
           id="message" 
           rows={6} 
-          className="w-full bg-white/10 backdrop-blur-md border border-purple-500/30 rounded-lg px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full px-4 py-3 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-lg"
+          style={{
+            background: "rgba(255, 255, 255, 0.06)",
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            backdropFilter: "blur(4.3px)",
+            WebkitBackdropFilter: "blur(4.3px)",
+            border: "1px solid rgba(255, 255, 255, 0.21)"
+          }}
           placeholder="Tell us about your project..."
           value={formData.message}
           onChange={handleChange}
@@ -126,7 +154,14 @@ export default function ContactForm() {
       
       <button 
         type="submit" 
-        className="bg-purple-600 hover:bg-purple-700 text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition-colors duration-300 backdrop-blur-md shadow-md border border-purple-500/50"
+        className="text-white font-medium py-3 px-6 rounded-full inline-flex items-center transition-all duration-300"
+        style={{
+          background: "rgba(147, 51, 234, 0.7)",
+          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+          backdropFilter: "blur(4.3px)",
+          WebkitBackdropFilter: "blur(4.3px)",
+          border: "1px solid rgba(255, 255, 255, 0.21)"
+        }}
         disabled={status.submitting}
       >
         {status.submitting ? 'Sending...' : 'Send Message'}
