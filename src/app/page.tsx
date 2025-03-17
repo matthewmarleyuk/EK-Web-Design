@@ -447,11 +447,14 @@ export default function Home() {
                   ))}
                 </ul>
                 <div className="flex flex-wrap gap-4">
-                  <a href="tel:07478707581" className="glass-button inline-block font-medium">
+                  <a href="tel:07478707581" className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)]">
                     Call Us Now
                   </a>
-                  <a href={getPath('/contact')} className="glass-button inline-block font-medium bg-purple-600/30">
+                  <a href={getPath('/contact')} className="glass-button bg-black/30 text-center font-medium px-8 py-3">
                     Contact Us
+                    <svg className="w-4 h-4 ml-2 inline-block" viewBox="0 0 24 24" fill="none">
+                      <path d="M20.0002 5.99969L8.00016 17.9997L4.00016 13.9997" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </a>
                 </div>
               </div>
