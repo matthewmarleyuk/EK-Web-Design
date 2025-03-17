@@ -1,6 +1,15 @@
 import React from 'react';
 import Navigation from '../components/navigation';
 
+// Create a function to properly handle paths across environments
+const getPath = (path: string) => {
+  // Check if we're in production (GitHub Pages)
+  const basePath = process.env.NODE_ENV === 'production' ? '/EK-Web-Design' : '';
+  // Ensure the path starts with a slash but doesn't have double slashes
+  const normalizedPath = path.startsWith('/') ? path : `/${path}`;
+  return `${basePath}${normalizedPath}`;
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen">
@@ -27,7 +36,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <a href="/contact" className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] animate-pulse-slow">
+              <a href={getPath('/contact')} className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] animate-pulse-slow">
                 Get Started
               </a>
               <a href="https://cal.com/matthewmarley/15min" target="_blank" rel="noopener noreferrer" className="glass-button bg-black/30 text-center font-medium px-8 py-3">
@@ -145,19 +154,19 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="glass-darker p-8 text-center">
+            <div className="bg-[#2a1a50] p-8 rounded-xl text-center border border-purple-500/30">
               <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">15</div>
-              <p className="text-xl font-medium">Years Experience</p>
+              <p className="text-xl font-medium text-white">Years Experience</p>
             </div>
             
-            <div className="glass-darker p-8 text-center">
+            <div className="bg-[#2a1a50] p-8 rounded-xl text-center border border-purple-500/30">
               <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">150+</div>
-              <p className="text-xl font-medium">Projects Completed</p>
+              <p className="text-xl font-medium text-white">Projects Completed</p>
             </div>
             
-            <div className="glass-darker p-8 text-center">
+            <div className="bg-[#2a1a50] p-8 rounded-xl text-center border border-purple-500/30">
               <div className="text-5xl md:text-6xl font-bold mb-4 text-purple-400">5.0</div>
-              <p className="text-xl font-medium">Rated on Google</p>
+              <p className="text-xl font-medium text-white">Rated on Google</p>
             </div>
           </div>
         </div>
@@ -440,12 +449,12 @@ export default function Home() {
                   <a href="tel:+441234567890" className="glass-button inline-block font-medium">
                     Call Us Now
                   </a>
-                  <a href="/contact" className="glass-button inline-block font-medium bg-purple-600/30">
+                  <a href={getPath('/contact')} className="glass-button inline-block font-medium bg-purple-600/30">
                     Contact Us
                   </a>
                 </div>
               </div>
-              <div className="glass p-6 md:p-8 rounded-xl">
+              <div className="glass p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-lg" style={{backgroundColor: 'rgba(19, 19, 41, 0.75)', borderColor: 'rgba(124, 58, 237, 0.3)'}}>
                 <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
                 <form className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -454,7 +463,7 @@ export default function Home() {
                       <input
                         type="text"
                         id="name"
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
                         placeholder="Your name"
                         required
                       />
@@ -464,7 +473,7 @@ export default function Home() {
                       <input
                         type="email"
                         id="email"
-                        className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                        className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
                         placeholder="Your email"
                         required
                       />
@@ -475,7 +484,7 @@ export default function Home() {
                     <input
                       type="text"
                       id="subject"
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
                       placeholder="How can we help?"
                       required
                     />
@@ -485,14 +494,14 @@ export default function Home() {
                     <textarea
                       id="message"
                       rows={4}
-                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                      className="w-full px-4 py-3 bg-purple-900/20 border border-purple-500/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 text-white"
                       placeholder="Tell us about your project..."
                       required
                     />
                   </div>
                   <button
                     type="submit"
-                    className="w-full glass-button font-medium"
+                    className="w-full bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300 shadow-lg"
                   >
                     Send Message
                   </button>
@@ -547,7 +556,7 @@ export default function Home() {
                   'Website Maintenance'
                 ].map((service, index) => (
                   <li key={index}>
-                    <a href="/services" className="text-white/70 hover:text-white transition-colors duration-300">
+                    <a href={getPath('/services')} className="text-white/70 hover:text-white transition-colors duration-300">
                       {service}
                     </a>
                   </li>
@@ -559,9 +568,9 @@ export default function Home() {
               <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
               <ul className="space-y-2">
                 {[
-                  { name: 'About Us', href: '/about' },
-                  { name: 'Services', href: '#services' },
-                  { name: 'Contact', href: '/contact' }
+                  { name: 'About Us', href: getPath('/about') },
+                  { name: 'Services', href: getPath('/services') },
+                  { name: 'Contact', href: getPath('/contact') }
                 ].map((link, index) => (
                   <li key={index}>
                     <a href={link.href} className="text-white/70 hover:text-white transition-colors duration-300">
