@@ -257,8 +257,8 @@ export default function Services() {
         <div className="container">
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-center">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              Ready to Start<br />
-              Your Project?
+              <span className="md:hidden">Ready to Start<br />Your Project?</span>
+              <span className="hidden md:inline">Ready to Start Your Project?</span>
             </h2>
             <p className="text-white/80 max-w-2xl mx-auto text-base sm:text-lg mb-8">
               Let's discuss how we can help your business achieve its digital goals.
