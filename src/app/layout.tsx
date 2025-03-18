@@ -16,6 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <meta name="google-site-verification" content="ue4Hu8mn7EdzlJJSWYhykL-xXjwprfaOjzTlVhNctT0" />
+      </head>
       <body className={inter.className}>
         <div className="bg-gradient-to-br from-[#120826] to-[#1e0e38] min-h-screen bg-fixed">
           {children}
