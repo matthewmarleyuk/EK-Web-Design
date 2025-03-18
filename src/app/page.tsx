@@ -3,8 +3,9 @@ import Navigation from '../components/navigation';
 import { getPath } from '../utils/path';
 import dynamic from 'next/dynamic';
 
-// Use dynamic import with no SSR for the client component
+// Use dynamic import with no SSR for the client components
 const ContactForm = dynamic(() => import('../components/ContactForm'), { ssr: false });
+const HeroContactForm = dynamic(() => import('../components/HeroContactForm'), { ssr: false });
 
 // Remove or comment out the old getPath function
 // Create a function to properly handle paths across environments
@@ -465,9 +466,18 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <div className="glass p-8 rounded-2xl">
-                <h3 className="text-2xl font-semibold mb-6">Get In Touch</h3>
-                <ContactForm />
+              <div className="glass rounded-2xl">
+                {/* Remove glow effects */}
+                
+                <div className="p-8 relative z-10">
+                  <h3 className="text-2xl font-semibold mb-6">
+                    Get Started Today
+                    <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-600/30 text-purple-200">
+                      Free Consultation
+                    </span>
+                  </h3>
+                  <HeroContactForm />
+                </div>
               </div>
             </div>
           </div>
