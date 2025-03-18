@@ -431,53 +431,83 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section" id="contact">
         <div className="container">
-          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Online Presence?</h2>
-                <p className="text-white/80 mb-8">
-                  Let's discuss how we can help your business thrive in the digital world. Contact us today for a free consultation.
-                </p>
-                <ul className="space-y-4 mb-8">
-                  {[
-                    'Custom website design tailored to your brand',
-                    'Mobile-responsive layouts that work on all devices',
-                    'SEO-optimized to help you rank higher',
-                    'Easy to manage with intuitive admin interfaces',
-                    'Ongoing support and maintenance packages'
-                  ].map((item, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                      <svg className="text-purple-400 mt-1 w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-purple-900/40 to-purple-600/20 border border-purple-500/30">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 leading-tight">
+                Ready to Transform<br />
+                Your Online Presence?
+              </h2>
+              <p className="text-white/80 text-lg mb-10 max-w-2xl">
+                Let's discuss how we can help your business thrive in the digital world. Our solutions are designed to meet your unique needs and goals.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+                <a href={getPath('/contact')} className="block p-6 bg-white/5 hover:bg-white/10 border border-purple-500/20 rounded-xl transition-all duration-300 group">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-semibold">Custom Web Design</h3>
+                    <div className="p-2 rounded-full bg-purple-500/20 text-purple-300 group-hover:translate-x-1 transition-transform">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-4">
-                  <a href="tel:07478707581" className="bg-white text-purple-600 font-medium px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)]">
-                    Call Us Now
-                  </a>
-                  <a href={getPath('/contact')} className="glass-button bg-black/30 text-center font-medium px-8 py-3">
-                    Contact Us
-                    <svg className="w-4 h-4 ml-2 inline-block" viewBox="0 0 24 24" fill="none">
-                      <path d="M20.0002 5.99969L8.00016 17.9997L4.00016 13.9997" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </a>
-                </div>
-              </div>
-              <div className="glass rounded-2xl">
-                {/* Remove glow effects */}
+                    </div>
+                  </div>
+                  <p className="text-white/70">Websites that reflect your brand identity and engage your target audience effectively.</p>
+                </a>
                 
-                <div className="p-8 relative z-10">
-                  <h3 className="text-2xl font-semibold mb-6">
-                    Get Started Today
-                    <span className="ml-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-purple-600/30 text-purple-200">
-                      Free Consultation
-                    </span>
-                  </h3>
-                  <HeroContactForm />
-                </div>
+                <a href={getPath('/contact')} className="block p-6 bg-white/5 hover:bg-white/10 border border-purple-500/20 rounded-xl transition-all duration-300 group">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-semibold">Mobile Optimization</h3>
+                    <div className="p-2 rounded-full bg-purple-500/20 text-purple-300 group-hover:translate-x-1 transition-transform">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-white/70">Responsive layouts that provide seamless experiences across all devices and screen sizes.</p>
+                </a>
+                
+                <a href={getPath('/contact')} className="block p-6 bg-white/5 hover:bg-white/10 border border-purple-500/20 rounded-xl transition-all duration-300 group">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-semibold">SEO Strategy</h3>
+                    <div className="p-2 rounded-full bg-purple-500/20 text-purple-300 group-hover:translate-x-1 transition-transform">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-white/70">Optimized websites that rank higher in search results, driving more organic traffic to your business.</p>
+                </a>
+                
+                <a href={getPath('/contact')} className="block p-6 bg-white/5 hover:bg-white/10 border border-purple-500/20 rounded-xl transition-all duration-300 group">
+                  <div className="flex justify-between items-center mb-4">
+                    <h3 className="text-xl font-semibold">Ongoing Support</h3>
+                    <div className="p-2 rounded-full bg-purple-500/20 text-purple-300 group-hover:translate-x-1 transition-transform">
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <p className="text-white/70">Dedicated maintenance and technical assistance to ensure your website performs optimally at all times.</p>
+                </a>
+              </div>
+              
+              <div className="flex flex-wrap justify-center gap-6 mt-8">
+                <a href="tel:07478707581" className="bg-white text-purple-600 font-medium px-10 py-4 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] hover:scale-105">
+                  <span className="flex items-center">
+                    <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    Call Us Now
+                  </span>
+                </a>
+                <a href={getPath('/contact')} className="relative overflow-hidden bg-purple-600/70 hover:bg-purple-600/90 text-white font-medium px-10 py-4 rounded-full transition-all duration-300 hover:scale-105 border border-purple-400/30 shadow-[0_0_15px_rgba(147,51,234,0.5)]">
+                  <span className="relative z-10 flex items-center">
+                    Contact Us
+                    <svg className="w-5 h-5 ml-2" viewBox="0 0 24 24" fill="none">
+                      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
