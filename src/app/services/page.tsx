@@ -258,11 +258,11 @@ export default function Services() {
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-left relative overflow-hidden">
             {/* Decorative elements - desktop only */}
             <div className="hidden md:block">
-              <div className="absolute top-[5%] right-[10%] w-32 h-32 bg-purple-400/20 rounded-full blur-xl"></div>
-              <div className="absolute bottom-[15%] right-[5%] w-40 h-40 bg-purple-600/15 rounded-full blur-xl"></div>
-              <div className="absolute top-[35%] right-[12%] w-24 h-24 bg-white/10 rounded-full blur-lg"></div>
-              <div className="absolute bottom-[30%] right-[25%] w-16 h-16 bg-purple-300/20 rounded-full blur-md"></div>
-              <div className="absolute top-[25%] right-[30%] w-20 h-20 bg-purple-500/15 rounded-full blur-xl"></div>
+              <div className="absolute -top-10 right-[25%] w-32 h-32 bg-purple-400/25 rounded-full blur-lg"></div>
+              <div className="absolute bottom-0 right-[5%] w-40 h-40 bg-purple-600/20 rounded-full blur-xl"></div>
+              <div className="absolute top-[35%] right-[15%] w-24 h-24 bg-white/15 rounded-full blur-md"></div>
+              <div className="absolute -bottom-5 right-[35%] w-24 h-24 bg-purple-300/25 rounded-full blur-lg"></div>
+              <div className="absolute top-[15%] right-[10%] w-48 h-48 bg-purple-500/20 rounded-full blur-xl opacity-70"></div>
             </div>
             
             <div className="relative z-10">

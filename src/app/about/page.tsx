@@ -242,11 +242,11 @@ export default function About() {
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-left relative overflow-hidden">
             {/* Decorative elements - desktop only */}
             <div className="hidden md:block">
-              <div className="absolute top-[15%] right-[20%] w-28 h-28 bg-purple-400/20 rounded-full blur-xl"></div>
-              <div className="absolute bottom-[25%] right-[15%] w-36 h-36 bg-purple-600/15 rounded-full blur-xl"></div>
-              <div className="absolute top-[45%] right-[8%] w-20 h-20 bg-white/10 rounded-full blur-lg"></div>
-              <div className="absolute bottom-[15%] right-[30%] w-16 h-16 bg-purple-300/20 rounded-full blur-md"></div>
-              <div className="absolute top-[30%] right-[35%] w-24 h-24 bg-purple-500/15 rounded-full blur-xl"></div>
+              <div className="absolute top-[15%] right-[20%] w-28 h-28 bg-purple-400/25 rounded-full blur-lg"></div>
+              <div className="absolute -bottom-8 right-[30%] w-36 h-36 bg-purple-600/20 rounded-full blur-xl"></div>
+              <div className="absolute top-[45%] right-[10%] w-20 h-20 bg-white/15 rounded-full blur-md"></div>
+              <div className="absolute -top-10 right-[25%] w-24 h-24 bg-purple-300/25 rounded-full blur-lg"></div>
+              <div className="absolute top-[30%] right-[35%] w-40 h-40 bg-purple-500/15 rounded-full blur-xl opacity-70"></div>
             </div>
             
             <div className="relative z-10">

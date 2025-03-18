@@ -434,11 +434,11 @@ export default function Home() {
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-purple-900/40 to-purple-600/20 border border-purple-500/30 relative overflow-hidden">
             {/* Decorative elements - desktop only */}
             <div className="hidden md:block">
-              <div className="absolute top-[10%] right-[15%] w-24 h-24 bg-purple-400/20 rounded-full blur-xl"></div>
-              <div className="absolute bottom-[20%] right-[10%] w-32 h-32 bg-purple-600/20 rounded-full blur-xl"></div>
-              <div className="absolute top-[40%] right-[5%] w-16 h-16 bg-white/10 rounded-full blur-lg"></div>
-              <div className="absolute bottom-[10%] right-[25%] w-12 h-12 bg-purple-300/20 rounded-full blur-md"></div>
-              <div className="absolute top-[20%] right-[30%] w-20 h-20 bg-purple-500/15 rounded-full blur-xl"></div>
+              <div className="absolute -top-5 right-[40%] w-32 h-32 bg-purple-400/25 rounded-full blur-lg"></div>
+              <div className="absolute bottom-0 right-[15%] w-40 h-40 bg-purple-600/25 rounded-full blur-xl"></div>
+              <div className="absolute top-[40%] right-[20%] w-28 h-28 bg-white/15 rounded-full blur-md"></div>
+              <div className="absolute bottom-[20%] right-[40%] w-20 h-20 bg-purple-300/25 rounded-full blur-lg"></div>
+              <div className="absolute top-[25%] right-[5%] w-52 h-52 bg-purple-500/20 rounded-full blur-xl opacity-75"></div>
             </div>
             
             <div className="max-w-3xl text-left relative z-10">
