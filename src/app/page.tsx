@@ -432,12 +432,11 @@ export default function Home() {
       <section className="section" id="contact">
         <div className="container">
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-purple-900/40 to-purple-600/20 border border-purple-500/30">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 leading-tight">
-                Ready to Transform<br />
-                Your Online Presence?
+            <div className="max-w-3xl text-left">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 leading-tight">
+                Ready to Transform Your Online Presence?
               </h2>
-              <p className="text-white/80 text-lg mb-10 max-w-2xl">
+              <p className="text-white/80 text-base sm:text-lg mb-10 max-w-2xl">
                 Let's discuss how we can help your business thrive in the digital world. Our solutions are designed to meet your unique needs and goals.
               </p>
               
@@ -491,7 +490,7 @@ export default function Home() {
                 </a>
               </div>
               
-              <div className="flex flex-wrap justify-center gap-6 mt-8">
+              <div className="flex flex-row flex-wrap gap-6 mt-8">
                 <a href="tel:07478707581" className="bg-white text-purple-600 font-medium px-10 py-4 rounded-full transition-all duration-300 hover:bg-gray-100 shadow-[0_0_15px_rgba(255,255,255,0.5)] hover:shadow-[0_0_20px_rgba(255,255,255,0.7)] hover:scale-105">
                   <span className="flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -239,16 +239,15 @@ export default function About() {
       {/* CTA Section */}
       <section className="section" id="about-cta">
         <div className="container">
-          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-center">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
-              <span className="md:hidden">Ready to Start<br />Your Project?</span>
-              <span className="hidden md:inline">Ready to Start Your Project?</span>
+          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-left">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+              Ready to Start Your Project?
             </h2>
-            <p className="text-white/80 max-w-2xl mx-auto text-base sm:text-lg mb-8">
+            <p className="text-white/80 max-w-2xl text-base sm:text-lg mb-8">
               Let's discuss how we can help your business achieve its digital goals.
               Our team is ready to bring your vision to life.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-row flex-wrap gap-4">
               <a href={getPath('/contact')} className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
                 Get in Touch
               </a>
