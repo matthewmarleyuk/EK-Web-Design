@@ -1,6 +1,6 @@
 /**
- * Utility function to fix the path for GitHub Pages deployment
- * Ensures we don't get double prefixes of /EK-Web-Design/EK-Web-Design
+ * Utility function for path handling that works across all deployment types
+ * (local development, Vercel, GitHub Pages)
  */
 export function getPath(path: string): string {
   // Check if running on the GitHub Pages domain
@@ -10,16 +10,11 @@ export function getPath(path: string): string {
   // Strip leading slash for consistency
   const normalizedPath = path.startsWith('/') ? path.substring(1) : path;
   
-  // In GitHub Pages domain, use a simple path without prefix
+  // Only in GitHub Pages domain, add the prefix
   if (isGitHubPages) {
-    return normalizedPath ? `/${normalizedPath}` : '/';
+    return normalizedPath ? `/EK-Web-Design/${normalizedPath}` : '/EK-Web-Design';
   }
   
-  // In development, also use simple paths
-  if (process.env.NODE_ENV !== 'production') {
-    return normalizedPath ? `/${normalizedPath}` : '/';
-  }
-  
-  // Only in production build but not on GitHub Pages domain, add the prefix
-  return normalizedPath ? `/EK-Web-Design/${normalizedPath}` : '/EK-Web-Design';
+  // For all other environments (Vercel, local development), use simple paths
+  return normalizedPath ? `/${normalizedPath}` : '/';
 } 
