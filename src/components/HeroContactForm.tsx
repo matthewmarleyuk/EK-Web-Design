@@ -64,7 +64,7 @@ export default function HeroContactForm() {
 
   // CSS for input fields
   const inputStyle = {
-    background: "rgba(255, 255, 255, 0.06)",
+    background: "rgba(19, 19, 41, 0.6)",
     boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
     backdropFilter: "blur(4.3px)",
     WebkitBackdropFilter: "blur(4.3px)",
@@ -87,7 +87,7 @@ export default function HeroContactForm() {
               <input 
                 type="text" 
                 id="name" 
-                className="w-full pl-12 pr-4 py-4 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
+                className="w-full pl-12 pr-4 py-4 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
                 style={inputStyle}
                 placeholder="Your Name"
                 value={formData.name}
@@ -104,7 +104,7 @@ export default function HeroContactForm() {
               <input 
                 type="email" 
                 id="email" 
-                className="w-full pl-12 pr-4 py-4 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
+                className="w-full pl-12 pr-4 py-4 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
                 style={inputStyle}
                 placeholder="Your Email"
                 value={formData.email}
@@ -124,7 +124,7 @@ export default function HeroContactForm() {
           <input 
             type="text" 
             id="subject" 
-            className="w-full pl-12 pr-4 py-4 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
+            className="w-full pl-12 pr-4 py-4 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
             style={inputStyle}
             placeholder="What can we help you with?"
             value={formData.subject}
@@ -142,7 +142,7 @@ export default function HeroContactForm() {
           <textarea 
             id="message" 
             rows={3} 
-            className="w-full pl-12 pr-4 py-4 text-purple-300 placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
+            className="w-full pl-12 pr-4 py-4 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-purple-500/50 rounded-xl transition-all duration-300"
             style={inputStyle}
             placeholder="Tell us about your project"
             value={formData.message}
