@@ -256,9 +256,12 @@ export default function Services() {
       <section className="section pb-24">
         <div className="container">
           <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
-            <p className="text-white/80 max-w-3xl mx-auto mb-8">
-              Let's discuss how we can help your business achieve its digital goals.<br />
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 leading-tight">
+              Ready to Start<br />
+              Your Project?
+            </h2>
+            <p className="text-white/80 max-w-2xl mx-auto text-base sm:text-lg mb-8">
+              Let's discuss how we can help your business achieve its digital goals.
               Our team is ready to bring your vision to life.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
