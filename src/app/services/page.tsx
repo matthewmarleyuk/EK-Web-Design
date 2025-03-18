@@ -1,6 +1,12 @@
 import React from 'react';
 import Navigation from '@/components/navigation';
 import { getPath } from '../../utils/path';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Services - EK Web Design',
+  description: 'Professional web design and development services tailored to meet your unique business needs.',
+};
 
 // Remove or comment out the old getPath function
 /*

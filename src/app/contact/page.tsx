@@ -2,6 +2,12 @@ import React from 'react';
 import Navigation from '@/components/navigation';
 import dynamic from 'next/dynamic';
 import { getPath } from '../../utils/path';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Contact Us - EK Web Design',
+  description: 'Get in touch with East Kilbride Web Design. We\'re here to help with your web development and design needs.',
+};
 
 // Use dynamic import with no SSR for the client component
 const ContactForm = dynamic(() => import('@/components/ContactForm'), { ssr: false });

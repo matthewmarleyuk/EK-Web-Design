@@ -1,6 +1,12 @@
 import React from 'react';
 import Navigation from '../../components/navigation';
 import { getPath } from '../../utils/path';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us - EK Web Design',
+  description: 'Learn about East Kilbride Web Design, our story, values, and our passion for creating exceptional digital experiences.',
+};
 
 // Remove or comment out the old getPath function
 /*
