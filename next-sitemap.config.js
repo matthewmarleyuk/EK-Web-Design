@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://ekwebdesign.vercel.app',
+  siteUrl: 'https://www.eastkilbridewebdesign.com',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   outDir: 'public',

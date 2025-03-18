@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://ekwebdesign.vercel.app
+Host: https://www.eastkilbridewebdesign.com
 
 # Sitemaps
-Sitemap: https://ekwebdesign.vercel.app/sitemap.xml
+Sitemap: https://www.eastkilbridewebdesign.com/sitemap.xml
