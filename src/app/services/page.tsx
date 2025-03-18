@@ -255,21 +255,32 @@ export default function Services() {
       {/* Call to Action */}
       <section className="section" id="services-cta">
         <div className="container">
-          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-left">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
-              Ready to Start Your Project?
-            </h2>
-            <p className="text-white/80 max-w-2xl text-base sm:text-lg mb-8">
-              Let's discuss how we can help your business achieve its digital goals.
-              Our team is ready to bring your vision to life.
-            </p>
-            <div className="flex flex-row flex-wrap gap-4">
-              <a href={getPath('/contact')} className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
-                Get in Touch
-              </a>
-              <a href={getPath('/#services')} className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
-                Explore Our Services
-              </a>
+          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl text-left relative overflow-hidden">
+            {/* Decorative elements - desktop only */}
+            <div className="hidden md:block">
+              <div className="absolute top-[5%] right-[10%] w-32 h-32 bg-purple-400/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-[15%] right-[5%] w-40 h-40 bg-purple-600/8 rounded-full blur-xl"></div>
+              <div className="absolute top-[35%] right-[12%] w-24 h-24 bg-white/5 rounded-full blur-lg"></div>
+              <div className="absolute bottom-[30%] right-[25%] w-16 h-16 bg-purple-300/10 rounded-full blur-md"></div>
+              <div className="absolute top-[25%] right-[30%] w-20 h-20 bg-purple-500/5 rounded-full blur-xl"></div>
+            </div>
+            
+            <div className="relative z-10">
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 leading-tight">
+                Ready to Start Your Project?
+              </h2>
+              <p className="text-white/80 max-w-2xl text-base sm:text-lg mb-8">
+                Let's discuss how we can help your business achieve its digital goals.
+                Our team is ready to bring your vision to life.
+              </p>
+              <div className="flex flex-row flex-wrap gap-4">
+                <a href={getPath('/contact')} className="bg-purple-600 hover:bg-purple-700 transition-colors duration-300 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-600/30">
+                  Get in Touch
+                </a>
+                <a href={getPath('/#services')} className="bg-purple-800/70 hover:bg-purple-800 transition-colors duration-300 border border-purple-400/50 inline-block font-medium px-8 py-3 rounded-full shadow-lg shadow-purple-900/20">
+                  Explore Our Services
+                </a>
+              </div>
             </div>
           </div>
         </div>

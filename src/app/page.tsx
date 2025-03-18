@@ -431,8 +431,17 @@ export default function Home() {
       {/* CTA Section */}
       <section className="section" id="contact">
         <div className="container">
-          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-purple-900/40 to-purple-600/20 border border-purple-500/30">
-            <div className="max-w-3xl text-left">
+          <div className="glass p-8 md:p-12 lg:p-16 rounded-2xl bg-gradient-to-br from-purple-900/40 to-purple-600/20 border border-purple-500/30 relative overflow-hidden">
+            {/* Decorative elements - desktop only */}
+            <div className="hidden md:block">
+              <div className="absolute top-[10%] right-[15%] w-24 h-24 bg-purple-400/10 rounded-full blur-xl"></div>
+              <div className="absolute bottom-[20%] right-[10%] w-32 h-32 bg-purple-600/10 rounded-full blur-xl"></div>
+              <div className="absolute top-[40%] right-[5%] w-16 h-16 bg-white/5 rounded-full blur-lg"></div>
+              <div className="absolute bottom-[10%] right-[25%] w-12 h-12 bg-purple-300/10 rounded-full blur-md"></div>
+              <div className="absolute top-[20%] right-[30%] w-20 h-20 bg-purple-500/5 rounded-full blur-xl"></div>
+            </div>
+            
+            <div className="max-w-3xl text-left relative z-10">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-purple-200 leading-tight">
                 Ready to Transform Your Online Presence?
               </h2>
