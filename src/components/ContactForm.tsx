@@ -30,7 +30,7 @@ export default function ContactForm() {
 
     try {
       // Post data to webhook URL
-      const res = await fetch('https://hook.eu2.make.com/j6do3ehd5970jscb9rleducwqai2gt0o', {
+      const res = await fetch('https://hook.eu2.make.com/eoeh6brjc7w6w22n1oqpda83e3ckvvrh', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
